@@ -1,0 +1,26 @@
+﻿<Window x:Class="ЛР6.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ЛР6"
+        mc:Ignorable="d"
+        Title="Аудиоплеер" Height="400" Width="600">
+    <Grid>
+        <StackPanel Orientation="Horizontal">
+            <Button x:Name="Saving" Height="20" Width="100" VerticalAlignment="Top" Content="Сохранить"
+Background="White" Click="Save" />
+            <Button x:Name="Opening" Height="20" Width="100" VerticalAlignment="Top" Content="Открыть звук"
+Background="White" Click="Open"/>
+            <Button x:Name="Opening_1" Height="20" Width="100" VerticalAlignment="Top" Content="Открыть файл"
+Background="White" Click="Open_file"/>
+        </StackPanel>
+        <ListBox x:Name="Playlist" Grid.Row="0" Grid.Column="0" Margin="0,50,0,0" SelectionChanged="Playlist_SelectionChanged"/>
+        <WrapPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Button Name="btnPlay" Width="70" Height="30" Click="btnPlay_Click">Play</Button>
+            <Button Name="btnPause" Width="70" Margin="5,0" Click="btnPause_Click">Pause</Button>
+            <Button Name="btnStop" Width="70" Click="btnStop_Click">Stop</Button>
+        </WrapPanel>
+        <TextBox Text="" VerticalAlignment="Top" x:Name="textBox" Margin="0,25,0,0"/>
+    </Grid>
+</Window>
